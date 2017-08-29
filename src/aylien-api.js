@@ -1,30 +1,39 @@
-(function(exports){
-  function ApiCallsModel() {
-  }
-  ApiCallsModel.prototype.testApi = function(){
-    var htmlToLoad = "https://api.newsapi.aylien.com/api/v1/stories?published_at.start=NOW-30DAYS%2FDAY&published_at.end=NOW&categories.id%5B%5D=IAB12&categories.taxonomy=iab-qag&language=en&sort_by=recency&sentiment.title.polarity=positive"
-    this.load(htmlToLoad, function(xhr) {
-      var json = JSON.parse(xhr.responseText);
-      console.log(json)
-    });
-  };
+var https = require('https'),
+    querystring = require('querystring');
 
-  ApiCallsModel.prototype.load = function(url, callback) {
-          var xhr = new XMLHttpRequest();
-          xhr.onreadystatechange = ensureReadiness;
-          function ensureReadiness() {
-              if(xhr.readyState < 4) {
-                  return;
-              }
-              if(xhr.status !== 200) {
-                  return;
-              }
-              if(xhr.readyState === 4) {
-                  callback(xhr);
-              }
-          }
-          xhr.open('GET', url, true);
-          xhr.send('');
-      }
-      exports.ApiCallsModel = ApiCallsModel
-    })(this);
+const APPLICATION_KEY = process.env.XAYLIENTextAPIApplicationKey,
+      APPLICATION_ID = process.env.XAYLIENTextAPIApplicationId;
+
+function call_api(endpoint, parameters, callback) {
+  var postData = querystring.stringify(parameters);
+  var request = https.request({
+    host: 'api.aylien.com',
+    path: '/api/v1/' + endpoint,
+    headers: {
+      'Accept':                             'application/json',
+      'Content-Type':                       'application/x-www-form-urlencoded',
+      'Content-Length':                     postData.length,
+      'X-AYLIEN-TextAPI-Application-ID':    APPLICATION_ID,
+      'X-AYLIEN-TextAPI-Application-Key':   APPLICATION_KEY,
+    }
+  }, function(response) {
+    var data = "";
+    response.on('data', function(chunk) {
+      data += chunk;
+    });
+    response.on('end', function() {
+      callback(JSON.parse(data));
+    });
+  });
+  request.write(postData);
+  request.end();
+}
+
+var parameters = {'text': 'John is a very good football player!'};
+call_api('sentiment', parameters, function(result) {
+  console.log(result);
+});
+
+call_api('language', parameters, function(result) {
+  console.log(result);
+});
