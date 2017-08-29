@@ -1,6 +1,6 @@
 # Moody News
 
-An application that allows a user the filter the news by their mood.
+An application that allows a user to filter the news by their mood.
 
 ## User Stories
 
