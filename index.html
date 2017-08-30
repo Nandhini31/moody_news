@@ -7,18 +7,13 @@
   </head>
   <body>
     <h1>Moody News</h1>
+    <button type="button" id = "happy">Happy Mood</button>
+    <button type="button" id = "sad">Sad Mood</button>
     <div id="app">
     </div>
     <script src = "src/APICall.js"> </script>
     <script src = "src/displayController.js"> </script>
-
-    <script>
-    var api = new APICall();
-    var newsBody = api.getHappyResponse();
-    console.log(newsBody);
-    console.log("newsBody");
-  
+    <script src = "moody_news_controller.js"></script>
     </script>
   </body>
-
 </html>
