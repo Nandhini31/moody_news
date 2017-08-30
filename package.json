@@ -22,6 +22,7 @@
   "homepage": "https://github.com/ryandav/moody_news#readme",
   "devDependencies": {
     "http-server": "^0.10.0"
+  },
   "dependencies": {
     "dotenv": "^4.0.0",
   }
