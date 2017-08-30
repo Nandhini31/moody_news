@@ -8,9 +8,7 @@
     var self = this;
     this.requestMethod(request, function (response){
       responseNewsBody = response.response.content.fields.body;
-      console.log(responseNewsBody);
-      self.newsBody = responseNewsBody;
-      self.element.innerHTML = self.newsBody;
+      self.element.innerHTML = responseNewsBody;
     });
   };
 
@@ -19,12 +17,9 @@
     var self = this;
     this.requestMethod(request, function (response){
       responseNewsBody = response.response.content.fields.body;
-      console.log(responseNewsBody);
-      self.newsBody = responseNewsBody;
-      this.element.innerHTML = self.newsBody;
+      self.element.innerHTML = responseNewsBody;
     });
   };
-
 
 exports.APICall = APICall;
 })(this);
