@@ -1,0 +1,22 @@
+{
+  "name": "moody_news",
+  "version": "1.0.0",
+  "description": "An application that allows a user to filter the news by their mood.",
+  "main": "index.js",
+  "scripts": {
+    "test": "bin/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryandav/moody_news.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryandav/moody_news/issues"
+  },
+  "homepage": "https://github.com/ryandav/moody_news#readme",
+  "devDependencies": {
+    "http-server": "^0.10.0"
+  }
+}

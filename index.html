@@ -7,8 +7,18 @@
   </head>
   <body>
     <h1>Moody News</h1>
+    <div id="app">
+    </div>
     <script src = "src/APICall.js"> </script>
-    <script>call = new APICall(); </script>
+    <script src = "src/displayController.js"> </script>
+
+    <script>
+    var api = new APICall();
+    var newsBody = api.getHappyResponse();
+    console.log(newsBody);
+    console.log("newsBody");
+  
+    </script>
   </body>
 
 </html>
