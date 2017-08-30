@@ -1,12 +1,28 @@
 describe("APICall", function(){
+  var mockObject;
+  var apiCall;
 
+  var mockRequestMethod = function(url, callback) {
+    callback({
+      response: {
+        content: {
+          fields: {
+            body: "Hello!"
+          }
+        }
+      }
+    });
+  };
+
+  beforeEach(function(){
+    mockObject = {};
+    apiCall = new APICall(mockObject, mockRequestMethod);
+  });
 
   it("should resturn a html from guardian", function(){
-    var mockObject = {};
-    var apiCall = new APICall(mockObject);
-
     apiCall.getHappyResponse();
-    console.log(mockObject.innerHTML)
-    expect(mockObject.innerHTML.include("Why is everyone talking about Venetian royalty?")).toBeTruthy();
+    console.log(mockObject.innerHTML);
+    expect(mockObject.innerHTML).toEqual("Hello!");
   });
+
 });
