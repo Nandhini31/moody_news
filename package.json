@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "An application that allows a user to filter the news by their mood.",
   "main": "index.js",
+
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
     "test": "bin/test"
   },
@@ -18,5 +22,7 @@
   "homepage": "https://github.com/ryandav/moody_news#readme",
   "devDependencies": {
     "http-server": "^0.10.0"
+  "dependencies": {
+    "dotenv": "^4.0.0",
   }
 }

@@ -40,6 +40,17 @@ So I can keep up to date when I am on the go,
 I would to be able to easily read the news on my phone
 ```
 
+## Run the app
+
+`git clone git@github.com:ryandav/moody_news.git
+cd moody_news
+open index.html`
+
+
+## Tests
+
+Tests are stored in the `spec` folder. To run the tests enter `bin/test` in the terminal.
+
 ## Collaborators
 * [Ryan Davison](https://github.com/ryandav)
 * [Sapphire Mason-Brown](https://github.com/SaphMB)
