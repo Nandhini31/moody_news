@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var AylienNewsApi = require('aylien-news-api');
+var $ = require('jquery')
 
 // require('./public/javascripts/test')
 var apiInstance = new AylienNewsApi.DefaultApi();
@@ -28,12 +29,14 @@ router.get('/', function(req, res, next) {
 	  } else {
 	    console.log('API called successfully. Returned data: ');
 	    console.log('========================================');
-			var happyStories="";
+			var happyStories="<ul>";
 	    for (var i = 0; i < data.stories.length; i++){
 				console.log(data.stories[i].title + " / " + data.stories[i].source.name);
-	      happyStories += (data.stories[i].title + " / " + data.stories[i].source.name);
+	      happyStories += "<li>" + (data.stories[i].title + " / " + data.stories[i].source.name) + "</li>";
 	    }
-			res.render('index', {title: 'Mood: Happy 🙂', stories: happyStories})
+			happyStories += "</ul>"
+			html = $($.parseHTML(happyStories))
+			res.render('index', {title: 'Mood: Happy 🙂', stories: html})
 		}
 	}
 	apiInstance.listStories(opts, callback);
