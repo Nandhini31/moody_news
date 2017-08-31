@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var AylienNewsApi = require('aylien-news-api');
+var $ = require('jquery')
 
 // require('./public/javascripts/test')
 var apiInstance = new AylienNewsApi.DefaultApi();
@@ -28,12 +29,11 @@ router.get('/', function(req, res, next) {
 	  } else {
 	    console.log('API called successfully. Returned data: ');
 	    console.log('========================================');
-			var neutralStories="";
 	    for (var i = 0; i < data.stories.length; i++){
 				console.log(data.stories[i].title + " / " + data.stories[i].source.name);
-	      neutralStories += (data.stories[i].title + " / " + data.stories[i].source.name);
+
 	    }
-			res.render('index', {title: 'Mood: Neutral 🤖', stories: neutralStories})
+			res.render('index', {title: 'Mood: Neutral 🤖', stories: data.stories})
 		}
 	}
 	apiInstance.listStories(opts, callback);
