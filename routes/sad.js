@@ -28,12 +28,10 @@ router.get('/', function(req, res, next) {
 	  } else {
 	    console.log('API called successfully. Returned data: ');
 	    console.log('========================================');
-			var sadStories="";
 	    for (var i = 0; i < data.stories.length; i++){
 				console.log(data.stories[i].title + " / " + data.stories[i].source.name);
-	      sadStories += (data.stories[i].title + " / " + data.stories[i].source.name);
 	    }
-			res.render('index', {title: 'Mood: Sad 😿', stories: sadStories})
+			res.render('index', {title: 'Mood: Sad 😿', stories: data.stories})
 		}
 	}
 	apiInstance.listStories(opts, callback);
