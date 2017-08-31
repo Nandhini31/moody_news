@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ryandav/moody_news.svg?branch=add-emoji-files)](https://travis-ci.org/ryandav/moody_news)
+
 # Moody News
 
 An application that allows a user to filter the news by their mood.
