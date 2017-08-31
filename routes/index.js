@@ -29,41 +29,50 @@ app_key.apiKey = process.env.X_AYLIEN_NewsAPI_Application_Key;
 
 var self = this
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ');
-    console.log('========================================');
-    for (var i = 0; i < data.stories.length; i++){
-			console.log(data.stories[i].title + " / " + data.stories[i].source.name);
-      self.document.getElementById("app").innerHTML += (data.stories[i].title + " / " + data.stories[i].source.name);
-    }
-  }
-};
+// var callback = function(error, data, response) {
+//   if (error) {
+//     console.error(error);
+//   } else {
+//     console.log('API called successfully. Returned data: ');
+//     console.log('========================================');
+//     for (var i = 0; i < data.stories.length; i++){
+// 			console.log(data.stories[i].title + " / " + data.stories[i].source.name);
+//       self.document.getElementById("app").innerHTML += (data.stories[i].title + " / " + data.stories[i].source.name);
+//     }
+//   }
+// };
 // apiInstance.listStories(opts, callback);
 
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Moody News' });
+  res.render('index', { title: 'Moody News', stories: "Stories will show here" });
 });
-
-router.get('/happy', function(req, res, next) {
-	var opts = {
-	  'language': ['en'],
-	  'notLanguage': ['es', 'it'],
-	  'publishedAtStart': 'NOW-7DAYS',
-	  'publishedAtEnd': 'NOW',
-		'sentimentBodyPolarity': 'positive',
-		'sentimentTitlePolarity': 'positive'
-	  // 'entitiesBodyLinksDbpedia': [
-	  //   'http://dbpedia.org/resource/Donald_Trump',
-	  //   'http://dbpedia.org/resource/Hillary_Rodham_Clinton'
-	  // ]
-	};
-	apiInstance.listStories(opts, callback);
-	res.render('index', {title: 'Mood: Happy 🙂'})
-})
+//
+// router.get('/happy', function(req, res, next) {
+// 	var opts = {
+// 	  'language': ['en'],
+// 	  'notLanguage': ['es', 'it'],
+// 	  'publishedAtStart': 'NOW-7DAYS',
+// 	  'publishedAtEnd': 'NOW',
+// 		'sentimentBodyPolarity': 'positive',
+// 		'sentimentTitlePolarity': 'positive'
+// 	};
+// 	var callback = function(error, data, response) {
+// 	  if (error) {
+// 	    console.error(error);
+// 	  } else {
+// 	    console.log('API called successfully. Returned data: ');
+// 	    console.log('========================================');
+// 			var happyStories="";
+// 	    for (var i = 0; i < data.stories.length; i++){
+// 				console.log(data.stories[i].title + " / " + data.stories[i].source.name);
+// 	      happyStories += (data.stories[i].title + " / " + data.stories[i].source.name);
+// 	    }
+// 			res.render('index', {title: 'Mood: Happy 🙂', stories: happyStories})
+// 		}
+// 	}
+// 	apiInstance.listStories(opts, callback);
+// })
 
 module.exports = router;
