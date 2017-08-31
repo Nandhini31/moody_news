@@ -6,3 +6,18 @@ body {
 a {
   color: #00B7FF;
 }
+
+.image-fluid {
+  margin: 15px;
+  max-width: 120px;
+  max-height: 120px;
+}
+
+.container-fluid {
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-bottom: 50px;
+  margin-right: auto;
+  text-align: center;
+}
