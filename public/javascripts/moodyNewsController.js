@@ -3,9 +3,13 @@ var element = document.getElementById("app");
 var api = new APICall(element, $.get);
 
 $("#happy").click(function(){
-  var newsBody = api.getHappyResponse();
+   window.location.href='/happy'
 });
 
 $("#sad").click(function(){
-  var newsBody = api.getSadResponse();
+  window.location.href='/sad'
+});
+
+$("#neutral").click(function(){
+  window.location.href='/neutral'
 });
