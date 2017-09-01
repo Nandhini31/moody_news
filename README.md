@@ -46,6 +46,7 @@ I would to be able to easily read the news on my phone
 
 `git clone git@github.com:ryandav/moody_news.git
 cd moody_news
+npm install
 open index.html`
 
 

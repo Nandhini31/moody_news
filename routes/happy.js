@@ -25,12 +25,9 @@ router.get('/', function(req, res, next) {
 	};
 	var callback = function(error, data, response) {
 	  if (error) {
-	    console.error(error);
+			console.error(error);
 	  } else {
-	    console.log('API called successfully. Returned data: ');
-	    console.log('========================================');
 	    for (var i = 0; i < data.stories.length; i++){
-				console.log(data);
 	    }
 			res.render('index', {title: 'Mood: Happy 🙂', stories: data.stories});
 		}
