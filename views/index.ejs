@@ -32,8 +32,10 @@
         </div>
 
         <div id="collapse<%= i %>"  class="collapse" role="tabpanel" aria-labelledby="heading<%= i %>">
-          <div class="card-block">
-            <%= stories[i].body %>
+          <div class="card-block article-body">
+            <% var lines=stories[i].body.split(". "); for(var j=0; j< lines.length; j++) { %>
+                <p><%= lines[j] + "." %></p>
+              <% } %>
           </div>
         </div>
       </div>
