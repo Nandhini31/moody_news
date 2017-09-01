@@ -1,6 +1,3 @@
-// var element = document.getElementById("app");
-// var api = new APICall(element, $.get);
-
 $("#happy.image-fluid").click(function(){
    window.location.href='/happy'
 });

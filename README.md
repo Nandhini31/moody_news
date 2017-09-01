@@ -2,7 +2,7 @@
 
 # Moody News
 
-An application that allows a user to filter the news by their mood.
+An application that allows a user to filter the news by mood. Whether they want to hear nothing but positive news, dampen their mood with negative news or remain constant with the neutral, Moody News can cater to them.
 
 ## User Stories
 
@@ -42,17 +42,73 @@ So I can keep up to date when I am on the go,
 I would to be able to easily read the news on my phone
 ```
 
-## Run the app
+## Running the app
 
-`git clone git@github.com:ryandav/moody_news.git
-cd moody_news
-npm install
-open index.html`
+You can run Moody News directly from your browser at https://moody-news.herokuapp.com
 
+```
+# Clone the repository
+$ git clone git@github.com:ryandav/moody_news.git
+```
+
+```
+# Go into the repository
+$ cd moody_news
+```
+
+```
+# Install node if you do not have it already
+$ brew install node
+```
+
+```
+# Install node if you do not have it already
+$ brew install node
+```
+
+```
+# Install the Node dependencies
+$ npm install
+```
+
+```
+# Start the server
+$ npm start
+```
+
+```
+# Run the programme from your browser
+$ visit localhost:3000
+```
 
 ## Tests
 
-Tests are stored in the `spec` folder. To run the tests enter `bin/test` in the terminal.
+Moody News was tested using Zombie and Mocha. Tests are stored in the `spec` folder.
+
+```
+# To run the tests
+$ bin/test
+```
+
+## Technologies
+* Node.js
+* Express
+* jQuery
+* Aylien News API
+* Bootstrap
+* HTML
+* CSS
+* Tested with Zombie and Mocha
+
+## Programe Screenshots
+
+![Screenshot](http://i.imgur.com/XVUOgHt.png)
+
+![Screenshot](http://i.imgur.com/4fK4EkB.png)
+
+![Screenshot](http://i.imgur.com/uz1yJMR.png)
+
+![Imgur](http://i.imgur.com/Nlrqw6c.png)
 
 ## Collaborators
 * [Ryan Davison](https://github.com/ryandav)

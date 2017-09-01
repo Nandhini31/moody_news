@@ -29,7 +29,7 @@ router.get('/', function(req, res, next) {
 	  } else {
 	    for (var i = 0; i < data.stories.length; i++){
 	    }
-			res.render('index', {title: 'Mood: Neutral 🤖', stories: data.stories})
+			res.render('index', {title: 'Enjoy a selection of neutral news stories', stories: data.stories})
 		}
 	}
 	apiInstance.listStories(opts, callback);
