@@ -92,6 +92,7 @@ $ bin/test
 
 ## Technologies
 * Node.js
+* Express
 * jQuery
 * Aylien News API
 * Bootstrap
