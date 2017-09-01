@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/ryandav/moody_news.svg?branch=add-emoji-files)](https://travis-ci.org/ryandav/moody_news)
+[![Build Status](https://travis-ci.org/ryandav/moody_news.svg?branch=master)](https://travis-ci.org/ryandav/moody_news)
 
 # Moody News
 
