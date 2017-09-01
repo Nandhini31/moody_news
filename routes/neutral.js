@@ -33,7 +33,7 @@ router.get('/', function(req, res, next) {
 				console.log(data.stories[i].title + " / " + data.stories[i].source.name);
 
 	    }
-			res.render('index', {title: 'Mood: Neutral 🤖', stories: data.stories})
+			res.render('index', {title: 'Enjoy a selection of neutral news stories', stories: data.stories})
 		}
 	}
 	apiInstance.listStories(opts, callback);

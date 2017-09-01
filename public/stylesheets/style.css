@@ -9,13 +9,13 @@ a {
 
 .image-fluid {
   margin: 15px;
-  max-width: 120px;
-  max-height: 120px;
+  max-width: 350px;
+  max-height: 350px;
 }
 
 .container-fluid {
   width: 100%;
-  max-width: 500px;
+  max-width: auto;
   margin-left: auto;
   margin-bottom: 50px;
   margin-right: auto;
