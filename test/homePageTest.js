@@ -15,7 +15,7 @@ describe('User visits home page', function() {
     return browser.visit('/');
   });
 
-  it('should see welcome page', function() {
+  it('should see home page', function() {
     // browser.visit('/');
     browser.assert.text('title', 'Moody News');
   });

@@ -25,7 +25,7 @@ describe('User clicks neutral button', function() {
       browser.assert.success();
     });
 
-    it('should see welcome page', function() {
+    it('should see neutral page', function() {
       browser.assert.text('title', 'Mood: Neutral 🤖');
     });
 

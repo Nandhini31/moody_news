@@ -25,7 +25,7 @@ describe('User clicks sad button', function() {
       browser.assert.success();
     });
 
-    it('should see welcome page', function() {
+    it('should see sad page', function() {
       browser.assert.text('title', 'Mood: Sad 😿');
     });
 
