@@ -25,7 +25,7 @@ describe('User clicks happy button', function() {
       browser.assert.success();
     });
 
-    it('should see welcome page', function() {
+    it('should see happy title', function() {
       browser.assert.text('title', 'Mood: Happy 🙂');
     });
 
