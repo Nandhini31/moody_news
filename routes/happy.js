@@ -32,7 +32,7 @@ router.get('/', function(req, res, next) {
 	    for (var i = 0; i < data.stories.length; i++){
 				console.log(data);
 	    }
-			res.render('index', {title: 'Mood: Happy 🙂', stories: data.stories});
+			res.render('index', {title: 'Enjoy a selection of positive news stories', stories: data.stories});
 		}
 	};
 	apiInstance.listStories(opts, callback);

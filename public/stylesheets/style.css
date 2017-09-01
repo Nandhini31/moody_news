@@ -1,6 +1,7 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
+  background-color: #003366;
 }
 
 a {
@@ -9,14 +10,15 @@ a {
 
 .image-fluid {
   margin: 15px;
-  max-width: 120px;
-  max-height: 120px;
+  max-width: 350px;
+  max-height: 350px;
 }
 
 .container-fluid {
   width: 100%;
-  max-width: 500px;
+  max-width: auto;
   margin-left: auto;
+  margin-top: 50px;
   margin-bottom: 50px;
   margin-right: auto;
   text-align: center;
@@ -25,4 +27,21 @@ a {
 .article-body {
   padding: 10px;
   font-size: 18px;
+}
+
+h1{
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 75px;
+  color:#FFFFFF;
+  text-align: center;
+}
+
+h2{
+  color: #CCCCCC;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+a.collapsed{
+  color: #003366;
 }
