@@ -1,15 +1,14 @@
+// var element = document.getElementById("app");
+// var api = new APICall(element, $.get);
 
-var element = document.getElementById("app");
-var api = new APICall(element, $.get);
-
-$("#happy").click(function(){
+$("#happy.image-fluid").click(function(){
    window.location.href='/happy'
 });
 
-$("#sad").click(function(){
+$("#sad.image-fluid").click(function(){
   window.location.href='/sad'
 });
 
-$("#neutral").click(function(){
+$("#neutral.image-fluid").click(function(){
   window.location.href='/neutral'
 });
